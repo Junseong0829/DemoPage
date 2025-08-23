@@ -127,7 +127,7 @@ const SermoDemo: React.FC = () => {
             Create your own AI English conversation partner and practice natural English conversations.
           </p>
         </div>
-        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12">
+        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-bold mb-6">AI Partner Customization</h3>
@@ -150,8 +150,18 @@ const SermoDemo: React.FC = () => {
                 </li>
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-8 text-center">
-              <div className="text-6xl mb-4">🤖</div>
+            <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-6 text-center">
+              <video 
+                className="w-full h-64 sm:h-72 md:h-80 object-contain rounded-lg mb-4"
+                autoPlay 
+                muted 
+                loop 
+                playsInline
+              >
+                <source src="/home-demo.mp4" type="video/mp4" />
+                <source src="/home-demo.webm" type="video/webm" />
+                <div className="text-6xl mb-4">🤖</div>
+              </video>
               <p className="text-gray-300">AI Partner Customization</p>
             </div>
           </div>
@@ -165,10 +175,20 @@ const SermoDemo: React.FC = () => {
             Take quizzes, review wrong answers, and create your own learning materials.
           </p>
         </div>
-        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12">
+        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl p-8 text-center">
-              <div className="text-6xl mb-4">📚</div>
+            <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl p-6 text-center">
+              <video 
+                className="w-full h-64 sm:h-72 md:h-80 object-contain rounded-lg mb-4"
+                autoPlay 
+                muted 
+                loop 
+                playsInline
+              >
+                <source src="/practice-demo.mp4" type="video/mp4" />
+                <source src="/practice-demo.webm" type="video/webm" />
+                <div className="text-6xl mb-4">📚</div>
+              </video>
               <p className="text-gray-300">Learning Tools Preview</p>
             </div>
             <div>
@@ -203,7 +223,7 @@ const SermoDemo: React.FC = () => {
             Solve various challenges to earn medals and track your learning journey.
           </p>
         </div>
-        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12">
+        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-bold mb-6">Gamified Learning System</h3>
@@ -226,8 +246,18 @@ const SermoDemo: React.FC = () => {
                 </li>
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl p-8 text-center">
-              <div className="text-6xl mb-4">🏅</div>
+            <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl p-6 text-center">
+              <video 
+                className="w-full h-64 sm:h-72 md:h-80 object-contain rounded-lg mb-4"
+                autoPlay 
+                muted 
+                loop 
+                playsInline
+              >
+                <source src="/quest-demo.mp4" type="video/mp4" />
+                <source src="/quest-demo.webm" type="video/webm" />
+                <div className="text-6xl mb-4">🏅</div>
+              </video>
               <p className="text-gray-300">Progress & Mission Status</p>
             </div>
           </div>
@@ -241,10 +271,20 @@ const SermoDemo: React.FC = () => {
             Have daily conversations with your customized AI and bookmark difficult words for learning.
           </p>
         </div>
-        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12">
+        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-2xl p-8 text-center">
-              <div className="text-6xl mb-4">💬</div>
+            <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-2xl p-6 text-center">
+              <video 
+                className="w-full h-64 sm:h-72 md:h-80 object-contain rounded-lg mb-4"
+                autoPlay 
+                muted 
+                loop 
+                playsInline
+              >
+                <source src="/chat-demo.mp4" type="video/mp4" />
+                <source src="/chat-demo.webm" type="video/webm" />
+                <div className="text-6xl mb-4">💬</div>
+              </video>
               <p className="text-gray-300">Conversation Interface</p>
             </div>
             <div>
