@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const SermoDemo: React.FC = () => {
   // 부드러운 스크롤 함수
@@ -13,8 +13,59 @@ const SermoDemo: React.FC = () => {
     }
   };
 
+  // 푸시 알림 상태
+  const [showNotification, setShowNotification] = useState(false);
+
+  // 컴포넌트 마운트 시 푸시 알림 표시
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowNotification(true);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white relative">
+      {/* 푸시 알림 */}
+      {showNotification && (
+        <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-50 animate-slideDown">
+          <div className="bg-white rounded-2xl shadow-2xl p-5 max-w-sm mx-4 border border-gray-200">
+            <div className="flex items-center space-x-4">
+              {/* Sermo 로고 */}
+              <div className="flex-shrink-0">
+                <img 
+                  src="/image.png" 
+                  alt="Sermo" 
+                  className="w-12 h-12 object-contain"
+                />
+              </div>
+              
+              {/* 알림 내용 */}
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center justify-between mb-2">
+                  <p className="text-sm font-semibold text-gray-900">Jenny</p>
+                  <p className="text-xs text-gray-500">Just now</p>
+                </div>
+                <p className="text-sm text-gray-700 leading-relaxed">
+                  Hey, How was your day?
+                </p>
+              </div>
+              
+              {/* 닫기 버튼 */}
+              <button 
+                onClick={() => setShowNotification(false)}
+                className="flex-shrink-0 text-gray-400 hover:text-gray-600 transition-colors ml-3"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Header */}
       <header className="container mx-auto px-6 py-8">
         <div className="flex items-center justify-between">
@@ -29,7 +80,7 @@ const SermoDemo: React.FC = () => {
             </div>
             
           </div>
-          <nav className="hidden md:flex space-x-8 text-xl">
+          <nav className="hidden md:flex space-x-8 text-xl -mt-4">
             <button 
               onClick={() => scrollToSection('home')} 
               className="hover:text-purple-400 transition-colors cursor-pointer"
